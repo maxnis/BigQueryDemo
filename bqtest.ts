@@ -7,7 +7,9 @@ const main = async (): Promise<void> => {
         "SELECT COUNT(*) FROM dataset_name.table_name WHERE someDate = CURRENT_DATE()",
     });
 
-    console.log('----- result', result);
+    result[0].forEach(row => {
+        console.log("-----> Row count:", row.f0_);        
+    });
 };
 
 main();
